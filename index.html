@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+    </head>
+    <body>
+        <h1>All Items</h1>
+        <div class="products">
+            <div class="product">
+                <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                <div class="details">
+                    <div class="item-name">item1</div>
+                    <div class="item-value">
+                        <span class="old-value">$200</span>
+                        <span class="value">$300</span>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                <div class="details">
+                    <div class="item-name">item1</div>
+                    <div class="item-value">
+                        <span class="old-value">$200</span>
+                        <span class="value">$300</span>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div><div class="product">
+                <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                <div class="details">
+                    <div class="item-name">item1</div>
+                    <div class="item-value">
+                        <span class="old-value">$200</span>
+                        <span class="value">$300</span>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div><div class="product">
+                <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                <div class="details">
+                    <div class="item-name">item1</div>
+                    <div class="item-value">
+                        <span class="old-value">$200</span>
+                        <span class="value">$300</span>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-and-total">
+        <div class="cart">
+            <div class="header">
+                <span>Items[0]</span>
+                <span>Qty</span>
+                <span>Price</span>
+            </div>
+            <div class="body">
+                <div class="item-meta">
+                    <span class="item">
+                        <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                        Item 1
+                        <span>x</span>
+                    </span>
+                </div>
+                <div class="item-qty">
+                    -
+                    <input type="text" />
+                    +    
+                </div>
+                <div class="price">
+                    $7.50
+                </div>
+            </div>
+            <div class="body">
+                <div class="item-meta">
+                    <span class="item">
+                        <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                        Item 1
+                        <span>x</span>
+                    </span>
+                </div>
+                <div class="item-qty">
+                    -
+                    <input type="text" />
+                    +    
+                </div>
+                <div class="price">
+                    $7.50
+                </div>
+            </div>
+            <div class="body">
+                <div class="item-meta">
+                    <span class="item">
+                        <img src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90" />
+                        Item 1
+                        <span>x</span>
+                    </span>
+                </div>
+                <div class="item-qty">
+                    -
+                    <input type="text" />
+                    +    
+                </div>
+                <div class="price">
+                    $7.50
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <h2 class="title">Total</h2>
+            <div class="total-section total-items">
+                <span>Items(4)</span>
+                <span>:</span>
+                <span>$1400</span> 
+            </div>
+            <div class="total-section total-discount">
+                <span>Items(4)</span>
+                <span>:</span>
+                <span>$1400</span> 
+            </div>
+            <div class="total-section total-type-discount">
+                <span>Items(4)</span>
+                <span>:</span>
+                <span>$1400</span> 
+            </div>
+            <div class="total-section total-final">
+                <span>Order Total</span>
+                <span>:</span>
+                <span>$980</span> 
+            </div>
+        </div>
+        </div>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker
+                        .register('/sw.js')
+                        .then((registration) => {
+                            console.log('SW registered: ', registration);
+                        })
+                        .catch((registrationError) => {
+                            console.log('SW registration failed: ', registrationError);
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>

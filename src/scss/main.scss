@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$color1: #f4f9f9;
+$color2: #ccf2f4;
+$color3: #a4ebf3;
+$color4: #aaaaaa;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $color1;
+}
+
+h1 {
+  border: 1px solid $color4;
+  border-left: 0;
+  border-right: 0;
+  padding: 10px;
+}
+
+.products {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 675px;
+  vertical-align: top;
+  .product {
+    border: 1px solid $color4;
+    background: $color4;
+    margin: 10px;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    .details {
+      padding: 10px 5px;
+    }
+    .old-value {
+      text-decoration: line-through;
+    }
+    button {
+      background-color: $color3;
+      border-radius: 2px;
+      padding: 5px;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      float: right;
+    }
+  }
+}
+
+.cart-and-total {
+  width: calc(100% - 680px);
+  display: inline-block;
+}
+
+.cart {
+  .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid $color4;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+    span {
+      flex-grow: 1;
+      width: 33.33%;
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    div {
+      flex-grow: 1;
+      width: 33.33%;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+    img {
+      vertical-align: bottom;
+      width: 20px;
+      height: 20px;
+    }
+    .item {
+      border:  1px solid $color4;
+      padding: 10px;
+    }
+    input {
+      width: 10px;
+    }
+  }
+}
+
+.total {
+  border:  1px solid $color4;
+  margin-top: 20px;
+  .title {
+    padding: 10px 0 0 10px;
+  }
+  .total-section {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    span {
+      flex-grow: 1;
+      width: 33.33%;
+      box-sizing: border-box;
+      margin-top: 10px;
+    }
+  }
+  .total-items {
+    margin-bottom: 5px;
+  }
+  .total-final {
+    background-color: $color4;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .products {
+    display: flex;
+  }
+  .cart-and-total {
+    width: 100%;
+    display: block;
+  }
+}
