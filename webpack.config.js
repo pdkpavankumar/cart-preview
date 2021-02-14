@@ -63,14 +63,9 @@ module.exports = {
     }, {
       test: /.(sa|sc|c)ss$/,
       use: [{
-        loader: MiniCssExtractPlugin.loader
-      }, {
-        loader: "css-loader",
-
-        options: {
-          sourceMap: true
-        }
-      }, {
+        loader: 'raw-loader'
+      },
+      {
         loader: "sass-loader",
 
         options: {
